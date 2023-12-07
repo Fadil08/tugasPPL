@@ -62,7 +62,7 @@ class _MyeditProfileuserState extends State<MyeditProfileuser> {
     // TODO: implement initState
     emailControler.text = widget.dataDet?.email ?? "";
     namaLengkapControler.text = widget.dataDet?.namaLengkap ?? '';
-    usiaControler.text = widget.dataDet!.usia ?? '';
+    usiaControler.text = widget.dataDet?.usia ?? '';
     pekerjaanControler.text = widget.dataDet?.pekerjaan ?? '';
     domisiliControler.text = widget.dataDet?.domisili ?? '';
     number = widget.dataDet?.noTelp ?? '';

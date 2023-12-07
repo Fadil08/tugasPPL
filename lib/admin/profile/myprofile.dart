@@ -72,130 +72,10 @@ class _ProfilePageState extends State<ProfilePage> {
         appBar: AppBar(
           backgroundColor: const Color.fromRGBO(18, 38, 67, 1),
           title: Text('Profile Page'),
+          leading: IconButton(onPressed: () {}, icon: Icon(Icons.logout)),
         ),
         body: Column(
           children: [
-            // Container(
-            //   color: Colors.amber,
-            //   width: 10,
-            //   height: 100,
-            // ),
-            // Expanded(
-            //   child: StreamBuilder<QuerySnapshot>(
-            //     stream: onMyProfile(),
-            //     builder: (context, snapshot) {
-            //       if (snapshot.hasData || snapshot.data != null) {
-            //         return Text(snapshot.hasData.toString());
-            // return ListView.separated(
-            //   separatorBuilder: (context, index) =>
-            //       const SizedBox(height: 8.0),
-            //   itemCount: snapshot.data!.docs.length,
-            //   itemBuilder: (context, index) {
-            //     DocumentSnapshot dsData = snapshot.data!.docs[index];
-            //     Padding(
-            //       padding: const EdgeInsets.all(8.0),
-            //       child: Column(
-            //         crossAxisAlignment: CrossAxisAlignment.stretch,
-            //         children: [
-            //           Padding(
-            //             padding: EdgeInsets.all(29.0),
-            //             child: CircleAvatar(
-            //               backgroundColor:
-            //                   Color.fromRGBO(18, 38, 67, 1),
-            //               radius: 63,
-            //               // backgroundImage: NetworkImage(data.ima)
-            //             ),
-            //           ),
-            //           Padding(
-            //             padding: const EdgeInsets.all(14.0),
-            //             child: Container(
-            //               height: 55,
-            //               width: double.infinity,
-            //               decoration: BoxDecoration(
-            //                   color: const Color.fromRGBO(
-            //                       214, 224, 239, 1),
-            //                   borderRadius:
-            //                       BorderRadius.circular(11)),
-            //               child: Align(
-            //                   alignment: Alignment.centerLeft,
-            //                   child: Padding(
-            //                     padding: const EdgeInsets.all(8.0),
-            //                     child: Text(
-            //                       'Name: ${saveata}}',
-            //                       style: const TextStyle(
-            //                           color: Color.fromRGBO(
-            //                               18, 38, 67, 0.82),
-            //                           fontWeight: FontWeight.w300),
-            //                     ),
-            //                   )),
-            //             ),
-            //           ),
-            //           Padding(
-            //             padding: const EdgeInsets.all(14.0),
-            //             child: Container(
-            //               height: 55,
-            //               width: double.infinity,
-            //               decoration: BoxDecoration(
-            //                   color: const Color.fromRGBO(
-            //                       214, 224, 239, 1),
-            //                   borderRadius:
-            //                       BorderRadius.circular(11)),
-            //               child: Align(
-            //                   alignment: Alignment.centerLeft,
-            //                   child: Padding(
-            //                     padding: const EdgeInsets.all(8.0),
-            //                     child: Text(
-            //                       // 'email: ${data['email']}',
-            //                       '',
-            //                       style: const TextStyle(
-            //                           color: Color.fromRGBO(
-            //                               18, 38, 67, 0.82),
-            //                           fontWeight: FontWeight.w300),
-            //                     ),
-            //                   )),
-            //             ),
-            //           ),
-            //           Padding(
-            //             padding: const EdgeInsets.all(14.0),
-            //             child: Container(
-            //               height: 55,
-            //               width: double.infinity,
-            //               decoration: BoxDecoration(
-            //                   color: const Color.fromRGBO(
-            //                       214, 224, 239, 1),
-            //                   borderRadius:
-            //                       BorderRadius.circular(11)),
-            //               child: Align(
-            //                   alignment: Alignment.centerLeft,
-            //                   child: Padding(
-            //                     padding: const EdgeInsets.all(8.0),
-            //                     child: Text(
-            //                       // 'number: ${data['number']}',
-            //                       '',
-            //                       style: const TextStyle(
-            //                           color: Color.fromRGBO(
-            //                               18, 38, 67, 0.82),
-            //                           fontWeight: FontWeight.w300),
-            //                     ),
-            //                   )),
-            //             ),
-            //           ),
-            //           ElevatedButton(
-            //               onPressed: () {
-            //                 print(data);
-            //               },
-            //               child: Text("tets"))
-            //         ],
-            //       ),
-            //     );
-            //   },
-            // );
-            // }
-            // return Center(child: Text(' data Kosong'));
-            // DocumentSnapshot documentSnapshot = snapshot.data?.docs;
-            // },
-            // ),
-            // ),
             Expanded(
                 child: StreamBuilder<QuerySnapshot>(
                     stream: onMyProfile(),
@@ -235,11 +115,11 @@ class _ProfilePageState extends State<ProfilePage> {
                                                 BoxShadow(
                                                     color: ColorPelatte
                                                         .primaryColor
-                                                        .withOpacity(.2),
+                                                        .withOpacity(2),
                                                     blurRadius: 10.0)
                                               ],
                                               borderRadius:
-                                                  BorderRadius.circular(100.0),
+                                                  BorderRadius.circular(10),
                                               gradient: LinearGradient(colors: [
                                                 ColorPelatte.primaryColor,
                                                 Colors.green.shade900

@@ -14,7 +14,7 @@ class MyLandingPage extends StatefulWidget {
 }
 
 String? accseptlogin;
-List pilihLogin = ["admin", "seller", "user"];
+List pilihLogin = ["admin", "seller", "user", "pakar"];
 
 class _MyLandingPageState extends State<MyLandingPage> {
   @override
@@ -79,14 +79,15 @@ class _MyLandingPageState extends State<MyLandingPage> {
               child: TextButton(
                 onPressed: () {
                   dataPref.savestatus();
-                  
+
                   if (accseptlogin == "admin") {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => pageLoginAdmin()));
                   } else if (accseptlogin == 'user' ||
-                      accseptlogin == 'suplier') {
+                      accseptlogin == 'suplier' ||
+                      accseptlogin == 'pakar') {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => pageLogin()));
                   } else {
@@ -157,4 +158,3 @@ class dataPref {
     pref.remove("status");
   }
 }
-

@@ -1,3 +1,4 @@
+import 'package:belajar_firebase/users/chat/chatpage.dart';
 import 'package:belajar_firebase/users/chat/chatuser/rooms.dart';
 import 'package:belajar_firebase/users/profile/myprofile.dart';
 
@@ -31,7 +32,7 @@ class _PageMainState extends State<PageMain> {
   final List<Widget> _pages = [
     HomeMenu(),
     MyHomePenjadwalan(),
-    RoomsPage(),
+    LisContactPakar(),
     ProfilePage()
   ];
   @override
@@ -54,8 +55,6 @@ class _PageMainState extends State<PageMain> {
     );
   }
 }
-
-
 
 class HomeMenu extends StatefulWidget {
   const HomeMenu({super.key});
@@ -137,10 +136,6 @@ class _TrendingMoviesState extends State<TrendingMovies> {
   //   // fetchRecord();
   //   initState();
   // }
-
- 
-
-
 
   @override
   Widget build(BuildContext context) {
